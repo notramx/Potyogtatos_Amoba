@@ -3,6 +3,7 @@
 #include "Circle_box.hpp"
 #include "Mywindow.hpp"
 #include "graphics.hpp"
+#include "Jatekmester.hpp"
 
 using namespace std;
 using namespace genv;
@@ -33,8 +34,12 @@ void Mywindow::eventLoop()
             {
                 w->eventHandler(ev);
             }
+        }
+        if(ev.type == ev_key &&ev.keycode ==key_space)
+        {
 
 
+            cout <<  jm->uploading() << endl;
         }
 
     }
@@ -42,10 +47,23 @@ void Mywindow::eventLoop()
 }
 
 
-Mywindow::Mywindow(){
+Mywindow::Mywindow()
+{
+    jm = new Jatekmester();
 
+    for (int i=100; i<700; i=i+100)
+        {
+        for(int j =100; j<800; j=j+100)
 
-    widgets.push_back(new Circle_box(500,500,100,100,40));
+            {
+                widgets.push_back(new Circle_box(this,j,i,100,100,45,jm->uploading(),(j/100)-1,(i/100)-1));
+                cout <<(i/100)-1; // oszlop
+                cout << ',';
+                cout << (j/100)-1; // sor
+                cout << "  ";
+            }
+        }
+
 
 
 }
@@ -73,8 +91,9 @@ void Mywindow::ExitToExit()
 
 }
 
-Mywindow::~Mywindow(){
+Mywindow::~Mywindow()
+{
 
- for(Widget *w : widgets)
+    for(Widget *w : widgets)
         delete w;
 }

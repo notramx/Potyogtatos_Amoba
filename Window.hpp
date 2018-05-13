@@ -4,11 +4,14 @@
 #include <vector>
 #include "Widget.hpp"
 #include <string>
+#include "Jatekmester.hpp"
+
 
 class Window
 {
 protected:
     std::vector <Widget*> widgets;
+
 public:
     virtual void eventLoop()=0;
     virtual void happening(std::string mail)=0;
