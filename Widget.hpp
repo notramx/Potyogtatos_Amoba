@@ -15,9 +15,6 @@ public:
     Widget(int _x, int _y, int _mx, int _my);
     virtual ~Widget(){}
 
-	//virtual bool focus(int px, int py);
-	//void unfocus(){selected=false;}
-
 	virtual void draw()=0;
     virtual void eventHandler(genv::event ev)=0;
     virtual std::string WriteToFile()=0;

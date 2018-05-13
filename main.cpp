@@ -1,5 +1,6 @@
 
 #include "Mywindow.hpp"
+#include "Circle_box.hpp"
 
 using namespace genv;
 using namespace std;

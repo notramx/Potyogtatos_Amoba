@@ -6,10 +6,10 @@
 
 class Mywindow : public Window
 {
-     unsigned int MAX_X = 900;
-     unsigned int MAX_Y = 750;
+    unsigned int MAX_X = 900;
+    unsigned int MAX_Y = 750;
 
-Jatekmester *jm;
+    Jatekmester *jm;
 public:
     Mywindow();
     ~Mywindow();

@@ -9,11 +9,12 @@ using namespace std;
 
 void Circle_box::draw()
 {
+
 	gout << move_to(x,y) << color(0, 0, 255) << box (sizeX,sizeY);
 
-    if (Who == 0)gout << color(255, 255,255); // feher
+    if (Who == 2)gout << color(255, 255,255); // feher
     if (Who == 1)gout << color(255, 0,0);      // piros
-    if (Who == 2)gout << color(255, 255,0);     //sarga
+    if (Who == 0)gout << color(255, 255,0);     //sarga
 
 
 
@@ -28,9 +29,9 @@ void Circle_box::draw()
     if (selected)
     {
 
-    if (Who == 0)gout << color(255, 255,255); // feher
+    if (Who == 2)gout << color(255, 255,255); // feher
     if (Who == 1)gout << color(255, 0,0);      // piros
-    if (Who == 2)gout << color(255, 255,0);     //sarga
+    if (Who == 0)gout << color(255, 255,0);     //sarga
 
 	for (int i=-r; i<=r; i++) {
         for (int j=-r; j<=r; j++) {
@@ -50,15 +51,18 @@ void Circle_box::eventHandler(event ev)
             {
                 selected = true;
                 action();
+
             }
         }
 }
 void Circle_box::action()
 {
-   _parent->WhichFree(Vcolumn,Vrow,Who);
+        _parent->WhichFree(Vcolumn,Vrow,Who);
 }
+
 
 string Circle_box::WriteToFile()
 {
+    //jm = new Jatekmester;
 return 0;
 }

@@ -6,6 +6,7 @@
 #include "Widget.hpp"
 #include "Window.hpp"
 #include <string>
+#include "Jatekmester.hpp"
 
 
 
@@ -15,16 +16,19 @@ class Circle_box : public Widget
     Window * _parent;
 
 
+
+
 public:
     Circle_box(Window* _parent,int _x, int _y, int _mx, int _my, int _r, int _who,int _Vrow,int _Vcolumn)
         : Widget(_x, _y,_mx,_my), r(_r),Who(_who),Vrow(_Vrow),Vcolumn(_Vcolumn)
-        {
-         this->_parent = _parent;
-        };
+    {
+        this->_parent = _parent;
+    };
     void draw();
     void eventHandler(genv::event ev);
     std::string WriteToFile();
     void action();
+
 };
 
 #endif // CIRCLE_BOX_HPP_INCLUDED
