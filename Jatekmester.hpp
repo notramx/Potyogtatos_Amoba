@@ -7,8 +7,9 @@ class Jatekmester
     std::vector<std::vector<int>> matrix;
 public:
 
-    int uploading();
-    void MatrixUploading(int Vcolumn,int Vrow,int Value);
+    void CreateMatrix();
+    void Uploading(int xVcolumn,int xVrow,int xValue);
+    int MatrixModf(int xVcolumn,int xVrow,int xValue);
 
 };
 

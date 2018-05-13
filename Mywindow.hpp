@@ -14,11 +14,7 @@ public:
     Mywindow();
     ~Mywindow();
     void eventLoop();
-    void happening(std::string mail);
-    void AddLineToList();
-    void ExitToExit();
-
-
+    void WhichFree(int xxVcolumn,int xxVrow,int xxValue);
 };
 
 #endif // MYWINDOW_HPP_INCLUDED

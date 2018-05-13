@@ -14,10 +14,7 @@ protected:
 
 public:
     virtual void eventLoop()=0;
-    virtual void happening(std::string mail)=0;
-    //virtual void  action()=0;
-    void AddLineToList();
-    void ExitToExit();
+    virtual void WhichFree(int xxVcolumn,int xxVrow,int xxValue)=0;
 };
 
 #endif // WINDOW_HPP_INCLUDED
